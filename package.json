@@ -1,0 +1,27 @@
+{
+    "name": "wordpress_starter",
+    "version": "1.0.0",
+    "description": "Standard Wordpress workflow with gulp",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "^2.13.0",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.1",
+        "gulp-concat": "^2.6.0",
+        "gulp-connect-php": "0.0.8",
+        "gulp-fontmin": "^0.7.4",
+        "gulp-imagemin": "^3.2.0",
+        "gulp-php2html": "^0.3.2",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^2.3.2",
+        "gulp-uglify": "^1.5.4",
+        "pump": "^1.0.2"
+    },
+    "author": "Patrick Sunico",
+    "repository": {},
+    "license": "ISC"
+}
