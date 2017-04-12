@@ -1,0 +1,72 @@
+/*!
+Theme Name: media_camp
+Theme URI: http://underscores.me/
+Author: Patrick Sunico
+Author URI: https://patricksunico.com
+Description: wordpress_starter
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mediacamp
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+media_camp is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+
+/* Variables and Mixins */
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/* End */
+
+
+/*Normalize, Typography, Base Elements*/
+
+@import "normalize";
+@import "typography/typography";
+@import "elements/elements";
+
+/*End*/
+
+@import "forms/forms";
+@import "navigation/navigation";
+@import "modules/accessibility";
+@import "modules/alignments";
+@import "modules/clearings";
+@import "site/secondary/widgets";
+@import "site/site";
+@import "modules/infinite-scroll";
+@import "media/media";

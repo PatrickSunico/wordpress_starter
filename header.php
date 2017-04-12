@@ -23,31 +23,27 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mediacamp' ); ?></a>
 
-	  <nav class="flex-nav">
-    <div class="container">
-      <span class="logo-placeholder">
-        <a href="#" class="logo-brand">
-          <img src="images/media-camp-logo.png" alt="">
-          Media Camp
-        </a>
-      </span>
-      <div class="toggleNav">
-        ☰
-      </div>
-      <ul class="ul-container">
-        <li><a href="/wordpress" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link">Blog</a></li>
-        <li><a href="#" class="nav-link">Resources</a></li>
-        <li><a href="#" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			<?php
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+			endif;
 
-	<div id="jumbotron-wrapper">
-		<div class="container">
-			<div class="heading-section">
-				<h1 class="jumbotron-title">Welcome to Media Camp</h1>
-			</div>
-		</div>
-	</div>
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif; ?>
+		</div><!-- .site-branding -->
 
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mediacamp' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
